@@ -6,12 +6,20 @@ background-position: center}
 .principal{width: 550px;
 height: 600px;
 left: 30%;
-animation: aparecer 3s}
+animation: aparecer 3s;
+top: 20%}
 
 .direita{width: 300px;
-height: 600px;
+height: 280px;
 left: 68%;
-animation: aparecer 2.5s}
+animation: aparecer 2.5s;
+top: 20%}
+
+.baixo{width: 300px;
+height: 280px;
+left: 68%;
+top: 60%;
+animation: aparecer 3s}
 
 .direita .content{
 justify-content: flex-start;
@@ -20,7 +28,8 @@ align-items: flex-start}
 .esquerdo{width: 300px;
 height: 600px;
 left: 9%;
-animation: aparecer 4s}
+animation: aparecer 4s;
+top: 20%}
 
 .janela{background-color: #d9d3c4;
 border: 2px solid  #6b6b6b;
@@ -30,8 +39,7 @@ box-sizing: border-box;
 display: flex;
 flex-direction: column;
 overflow: hidden;
-position: absolute;
-top: 20%}
+position: absolute;}
 
 .janela .titlebar{background: linear-gradient(90deg, #6b7fb0, #a9b8e0);
 padding: 4px 8px;
