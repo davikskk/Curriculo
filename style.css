@@ -1,22 +1,25 @@
 body{min-height: 100vh;
 min-width: 100vw;
 background-image: url(wallpaper1.png);
-background-position: center}
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed}
 
-.principal{width: 550px;
-height: 600px;
+.principal{width: clamp(200px, 75vh, 550px);
+height: clamp(300px, 80vh, 600px);
 left: 30%;
 animation: aparecer 3s;
 top: 30%}
 
-.direita{width: 300px;
-height: 280px;
+.direita{width: clamp(100px, 40vh, 300px);
+height: clamp(100px, 36vh, 300px);
 left: 68%;
 animation: aparecer 2.5s;
 top: 30%}
 
-.baixo{width: 300px;
-height: 280px;
+.baixo{width: clamp(100px, 40vw, 300px);
+height: clamp(100px, 36vh, 300px);
 left: 68%;
 top: 70%;
 animation: aparecer 3s}
@@ -25,8 +28,8 @@ animation: aparecer 3s}
 justify-content: flex-start;
 align-items: flex-start}
 
-.esquerdo{width: 300px;
-height: 600px;
+.esquerdo{width: clamp(100px, 40vh, 300px);
+height: clamp(300px, 80vh, 600px);
 left: 9%;
 animation: aparecer 4s;
 top: 30%}
@@ -61,33 +64,40 @@ overflow-x: hidden}
 
 .janela .content h1{font-size: 50px}
 
-.rei1{height: 480px;
-width: 168px;
+.rei1{height: clamp(100px, 60vh, 600px);
+width: clamp(70px, 20vh, 200px);
 position: absolute;
 top: 62%;
 left: 24%;
 animation: aparecer 2.3s}
 
-.rei2{height: 200px;
-width: 168px;
+.rei2{height: clamp(60px, 25vh, 280px);
+width: clamp(60px, 25vh, 280px);
 position: absolute;
 top: 10%;
 left: 55%;
 animation: aparecer 4.2s}
 
-.video{position: fixed;
-top: 0;
-left: 0;
-width: 100vw;
-height: 100vh;
-z-index: -1;
-overflow: hidden}
-
-.video video{width: 100%;
-height: 100%;
-object-fit: cover}
-
 @keyframes aparecer{
     from{opacity: 0; transform: translateY(20px)}
     to{opacity: 1; transform: translateY(0)}
+}
+
+@media (max-width: 768px) {
+  .principal, .direita, .baixo, .esquerdo {
+    position: static;
+    width: 90%;
+    height: auto;
+    min-height: 250px;
+    margin: 16px auto;
+    left: auto;
+    top: auto;
+  }
+
+  .rei1, .rei2 {
+    position: static;
+    margin: 12px auto;
+    width: clamp(80px, 30vw, 180px);
+    height: auto;
+  }
 }
