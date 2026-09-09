@@ -72,7 +72,7 @@ left: 24%;
 animation: aparecer 2.3s}
 
 .rei2{height: clamp(60px, 25vh, 280px);
-width: clamp(60px, 25vh, 280px);
+width: clamp(60px, 20vh, 260px);
 position: absolute;
 top: 10%;
 left: 55%;
