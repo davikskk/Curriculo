@@ -12,13 +12,13 @@ left: 30%;
 animation: aparecer 3s;
 top: 30%}
 
-.direita{width: clamp(100px, 40vh, 300px);
+.direita{width: clamp(100px, 30vw, 1000px);
 height: clamp(100px, 36vh, 300px);
 left: 68%;
 animation: aparecer 2.5s;
 top: 30%}
 
-.baixo{width: clamp(100px, 40vw, 300px);
+.baixo{width: clamp(100px, 30vw, 1000px);
 height: clamp(100px, 36vh, 300px);
 left: 68%;
 top: 70%;
